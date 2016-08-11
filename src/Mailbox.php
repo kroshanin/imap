@@ -23,6 +23,7 @@ class Mailbox implements \Countable, \IteratorAggregate
         $this->mailbox = $name;
         $this->connection = $connection;
         $this->name = substr($name, strpos($name, '}')+1);
+        $this->name = mb_convert_encoding($this->name, "UTF-8", "UTF7-IMAP");
     }
 
     /**
