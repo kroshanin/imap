@@ -1,9 +1,9 @@
 <?php
 
-namespace Ddeboer\Imap;
+namespace kroshanin\Imap;
 
-use Ddeboer\Imap\Exception\Exception;
-use Ddeboer\Imap\Exception\MailboxDoesNotExistException;
+use kroshanin\Imap\Exception\Exception;
+use kroshanin\Imap\Exception\MailboxDoesNotExistException;
 
 /**
  * A connection to an IMAP server that is authenticated for a user
