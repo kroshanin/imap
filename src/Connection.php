@@ -75,7 +75,8 @@ class Connection
             throw new MailboxDoesNotExistException($name);
         }
 
-        return new Mailbox($this->server . imap_utf7_encode($name), $this);
+        //return new Mailbox($this->server . imap_utf7_encode($name), $this);
+        return new Mailbox($this->server . $name, $this);
     }
 
     /**
