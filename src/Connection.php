@@ -151,7 +151,8 @@ class Connection
         if (null === $this->mailboxNames) {
             $mailboxes = imap_getmailboxes($this->resource, $this->server, '*');
             foreach ($mailboxes as $mailbox) {
-                $this->mailboxNames[] = imap_utf7_decode(str_replace($this->server, '', $mailbox->name));
+                //$this->mailboxNames[] = imap_utf7_decode(str_replace($this->server, '', $mailbox->name));
+                $this->mailboxNames[] = (str_replace($this->server, '', $mailbox->name));
             }
         }
 
