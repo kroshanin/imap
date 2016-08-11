@@ -1,6 +1,6 @@
 <?php
 
-namespace Ddeboer\Imap\Exception;
+namespace kroshanin\Imap\Exception;
 
 class AuthenticationFailedException extends Exception
 {
