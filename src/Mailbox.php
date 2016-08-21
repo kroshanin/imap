@@ -36,6 +36,13 @@ class Mailbox implements \Countable, \IteratorAggregate
         return $this->name;
     }
 
+    public function getSysName()
+    {
+		$sysname = $this->mailbox;
+		$sysname = substr($sysname, strpos($sysname, '}')+1);
+        return $sysname;
+    }
+
     /**
      * Get number of messages in this mailbox
      *
