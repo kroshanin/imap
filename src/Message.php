@@ -281,8 +281,8 @@ class Message extends Message\Part
      */
     public function move(Mailbox $mailbox)
     {
-        if (!imap_mail_move($this->stream, $this->messageNumber, $mailbox->getName(), \CP_UID)) {
-            throw new MessageMoveException($this->messageNumber, $mailbox->getName());
+        if (!imap_mail_move($this->stream, $this->messageNumber, $mailbox->getSysName(), \CP_UID)) {
+            throw new MessageMoveException($this->messageNumber, $mailbox->getSysName());
         }
 
         return $this;
